@@ -1,0 +1,23 @@
+# GRAV specific
+cache/*
+logs/*
+images/*
+assets/*
+tmp/*
+.sass-cache/
+
+# User data (sensitive)
+user/data/*
+user/accounts/*
+
+# Config files with sensitive data
+user/config/site.yaml
+user/config/system.yaml
+
+# Vendor dependencies
+vendor/
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
