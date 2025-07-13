@@ -13,6 +13,7 @@ user/accounts/*
 # Config files with sensitive data
 # user/config/site.yaml
 # user/config/system.yaml
+user/config/plugins/*.local.yaml
 
 # Vendor dependencies
 vendor/
