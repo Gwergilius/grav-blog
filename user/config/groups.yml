@@ -1,0 +1,17 @@
+visitors:
+  icon: users
+  readableName: 'Guest Users'
+  access:
+    site:
+      login: false
+  
+  administrators:
+    groupname: administrators
+    readableName: 'Blog Administrators'
+    icon: child
+    access:
+      admin:
+        login: true
+        super: true
+      site:
+        login: true
