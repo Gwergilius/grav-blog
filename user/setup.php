@@ -1,7 +1,10 @@
 <?php
 
-if (file_exists(__DIR__ . '/.env')) {
-    $lines = file(__DIR__ . '/.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+// Load environment variables for OAuth2 plugin
+$envFile = __DIR__ . '/../.env';
+
+if (file_exists($envFile)) {
+    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
         if (strpos($line, '=') !== false && !str_starts_with($line, '#')) {
             [$key, $value] = explode('=', $line, 2);
