@@ -14,8 +14,6 @@ default_groups:
 providers:
   github:
     enabled: true
-    client_id: Ov23lilDpMrfKfctmlz1
-    client_secret: 3d507d89412f89eda569d25c109045fd7428fba8
     options:
       scope:
         - 'user:email'
