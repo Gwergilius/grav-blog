@@ -1,2 +1,3 @@
 enabled: true
 filename: .env
+priority: 1000 # High prio to load it early

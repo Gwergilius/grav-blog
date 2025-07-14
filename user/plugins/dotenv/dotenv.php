@@ -78,16 +78,18 @@ class DotenvPlugin extends Plugin
     protected function normalizeData(array $data): array
     {
         foreach ($data as $key => $value) {
-            if (Utils::contains($key, '_DASH_')) {
-                $data[str_replace('_DASH_', '-', $key)] = $value;
+            $k = $key;
+            if (Utils::contains($k, '_')) {
+                $k = str_replace('_', '-', $k);   # Underscore '_' is converted to dash '-' 
+                $k = str_replace('--', '_', $k);  # but double underscore is converted to underscore
                 unset($data[$key]);
+                $data[$k] = $value;
             }
 
             if (in_array($value, ['false', 'true', 'null']) || is_numeric($value)) {
-                $data[$key] = json_decode($value);
+                $data[$k] = json_decode($value);
             }
         }
         return $data;
     }
-
 }
