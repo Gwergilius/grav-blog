@@ -69,13 +69,14 @@ providers:
       username_field: email  # Google uses email as username
       username_prefix: google_
   linkedin:
-    enabled: false
+    enabled: true
     client_id: null
     client_secret: null
     options:
-      scope:
-        - r_basicprofile
-        - r_emailaddress
+      scope: 
+        - openid
+        - email
+        - profile
 admin:
   enabled: false
   built_in_css: true
