@@ -14,6 +14,8 @@ default_groups:
 providers:
   github:
     enabled: true
+    client_id: null
+    client_secret: null
     options:
       scope:
         - 'user:email'
@@ -26,13 +28,12 @@ providers:
         - company
         - location
       merge_existing_users: true
-      email_field: 'email'
-      username_field: 'login'
-      username_prefix: 'gh_'
+      email_field: email
+      username_field: login
+      username_prefix: gh_
     default_access_levels:
       access:
-        site:
-          login: true
+        site: { login: true }
   instagram:
     enabled: false
     client_id: null
@@ -54,7 +55,7 @@ providers:
         - user_hometown
       graph_api_version: v2.10
   google:
-    enabled: false
+    enabled: true
     client_id: null
     client_secret: null
     options:
@@ -62,7 +63,7 @@ providers:
         - email
         - profile
       avatar_size: 200
-      hd: '*'
+      
   linkedin:
     enabled: false
     client_id: null
