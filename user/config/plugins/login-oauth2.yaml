@@ -64,6 +64,10 @@ providers:
         - profile
       avatar_size: 200
       hd: null
+      merge_existing_users: true
+      email_field: email
+      username_field: email  # Google uses email as username
+      username_prefix: google_
   linkedin:
     enabled: false
     client_id: null
