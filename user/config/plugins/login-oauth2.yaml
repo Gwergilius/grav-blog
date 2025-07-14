@@ -63,7 +63,7 @@ providers:
         - email
         - profile
       avatar_size: 200
-      
+      hd: null
   linkedin:
     enabled: false
     client_id: null
