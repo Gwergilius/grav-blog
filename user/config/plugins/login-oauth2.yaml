@@ -2,15 +2,21 @@ enabled: true
 debug: false
 built_in_css: true
 button_style: row
-require_grav_user: false
-save_grav_user: true
-store_provider_data: true
+require_grav_user: false    # Automatikus user létrehozás engedélyezése
+save_grav_user: false       # Ne mentse a felhasználókat
+store_provider_data: false
+
+# Alapértelmezett csoport a külső bejelentkezésekhez
+default_groups:
+  - visitors
+# Alapértelmezett jogosultságok (ezt felülírják a csoportok)
 default_access_levels:
   access:
     site:
       login: true
-default_groups:
-  - visitors
+    comments:
+      create: false
+
 providers:
   github:
     enabled: true
@@ -31,9 +37,6 @@ providers:
       email_field: email
       username_field: login
       username_prefix: gh_
-    default_access_levels:
-      access:
-        site: { login: true }
   instagram:
     enabled: false
     client_id: null

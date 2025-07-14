@@ -1,17 +1,40 @@
+# user/config/groups.yaml
+
 visitors:
-  icon: users
-  readableName: 'Guest Users'
+  groupname: visitors
+  description: "Bejelentkezett látogatók, kommentezhetnek"
+  readableName: "Látogatók"
   access:
     site:
-      login: false
-  
-administrators:
-  groupname: administrators
-  readableName: 'Blog Administrators'
-  icon: fa-users
+      login: true
+    comments:
+      create: true
+      
+editors:
+  groupname: editors
+  description: "Szerkesztők, saját cikkeket kezelhetnek"
+  readableName: "Szerkesztők"
   access:
+    site:
+      login: true
     admin:
       login: true
+      pages: true
+    pages:
+      create: true
+      read: true
+      update: true
+      delete: true
+    comments:
+      create: true
+      moderate: true
+
+administrators:
+  groupname: administrators
+  description: "Teljes körű adminisztrátori jogosultságok"
+  readableName: "Adminisztrátorok"
+  access:
+    admin:
       super: true
     site:
       login: true
