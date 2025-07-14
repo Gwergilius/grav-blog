@@ -14,8 +14,8 @@ default_groups:
 providers:
   github:
     enabled: true
-    client_id: null
-    client_secret: null
+    client_id: Your_Client_ID
+    client_secret: Your_Client_Secret
     options:
       scope:
         - 'user:email'
@@ -70,8 +70,8 @@ providers:
       username_prefix: google_
   linkedin:
     enabled: false
-    client_id: null
-    client_secret: null
+    client_id: Your_Client_ID
+    client_secret: Your_Client_Secret
     options:
       scope: 
         - openid
