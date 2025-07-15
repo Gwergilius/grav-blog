@@ -1,0 +1,23 @@
+# Extend/inherit from Quark theme
+extend:
+  type: inherit
+  theme: quark
+
+# Custom settings for your theme
+enable_langswitcher: true
+langswitcher_position: 'header'
+
+# Override any Quark settings if needed
+streams:
+  schemes:
+    theme:
+      type: ReadOnlyStream
+      prefixes:
+        '': [
+          'user://themes/gwergilius-multilang',
+          'user://themes/quark'
+        ]
+# Register template namespace
+twig:
+  namespaces:
+    quark: 'user://themes/quark/templates'

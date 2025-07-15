@@ -1,0 +1,23 @@
+name: Gwergilius Multilang
+slug: gwergilius-multilang
+type: theme
+version: 1.0.0
+description: "Multilingual theme based on Quark"
+icon: globe
+author:
+  name: Gwergilius
+  email: gwergilius@gwergilius.hu
+
+form:
+  validation: loose
+
+  fields:
+    # Custom options can be added here
+    custom_options:
+      type: section
+      title: Multilingual Options
+      
+    enable_langswitcher:
+      type: toggle
+      label: Enable Language Switcher
+      default: 1

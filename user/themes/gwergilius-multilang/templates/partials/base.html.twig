@@ -1,0 +1,42 @@
+{# Extend the original Quark base template #}
+{% extends '@quark/partials/base.html.twig' %}
+
+{# Override only the head block to add language support #}
+{% block head %}
+    {{ parent() }}
+    
+    {# Add hreflang support for SEO #}
+    
+    {% if config.plugins.langswitcher.enabled %}
+        {% include 'partials/langswitcher.hreflang.html.twig' %}
+    {% endif %}
+
+    {% if config.plugins['language-selector'].enabled %}
+        {% include 'partials/language-selector.hreflang.html.twig' %}
+    {% endif %}
+    {##}
+    
+    {# Add language-specific meta tags #}
+    <meta name="language" content="{{ grav.language.getActive }}">
+    <html lang="{{ grav.language.getActive }}">
+{% endblock %}
+{##}
+
+{# Override navigation to add language switcher #}
+{% block header_navigation %}
+    {{ parent() }}
+    
+    {# Add language switcher #}
+    {% if config.plugins.langswitcher.enabled %}
+        <div class="language-switcher">
+            {% include 'partials/langswitcher.html.twig' %}
+        </div>
+    {% endif %}
+    {% if config.plugins['language-selector'].enabled %}
+        <div class="language-switcher">
+            {% include 'partials/language-selector.html.twig' %}
+        </div>
+    {% endif %}
+
+{% endblock %}
+{##}

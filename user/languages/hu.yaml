@@ -1,0 +1,17 @@
+SITE_NAME: Gwergilius Blog
+NAVIGATION:
+  HOME: Főoldal
+  ABOUT: Rólam
+  BLOG: Blog
+  CONTACT: Kapcsolat
+BLOG:
+  READ_MORE: Tovább olvasom
+  POSTED_ON: Közzétéve
+  BY_AUTHOR: Szerző
+COMMENTS:
+  LEAVE_COMMENT: Hozzászólás írása
+  NAME: Név
+  EMAIL: E-mail
+  MESSAGE: Üzenet
+  SUBMIT: Küldés
+  
