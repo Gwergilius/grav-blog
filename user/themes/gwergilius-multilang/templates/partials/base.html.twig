@@ -10,17 +10,13 @@
     {% if config.plugins.langswitcher.enabled %}
         {% include 'partials/langswitcher.hreflang.html.twig' %}
     {% endif %}
-
-    {% if config.plugins['language-selector'].enabled %}
-        {% include 'partials/language-selector.hreflang.html.twig' %}
-    {% endif %}
-    {##}
     
     {# Add language-specific meta tags #}
     <meta name="language" content="{{ grav.language.getActive }}">
     <html lang="{{ grav.language.getActive }}">
+    {% do assets.addCss('theme://css/custom.css') %}
+
 {% endblock %}
-{##}
 
 {# Override navigation to add language switcher #}
 {% block header_navigation %}
@@ -32,11 +28,5 @@
             {% include 'partials/langswitcher.html.twig' %}
         </div>
     {% endif %}
-    {% if config.plugins['language-selector'].enabled %}
-        <div class="language-switcher">
-            {% include 'partials/language-selector.html.twig' %}
-        </div>
-    {% endif %}
 
 {% endblock %}
-{##}

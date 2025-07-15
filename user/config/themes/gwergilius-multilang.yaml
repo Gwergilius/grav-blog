@@ -1,0 +1,13 @@
+extend:
+  type: inherit
+  theme: quark
+langswitcher_position: header
+streams:
+  schemes:
+    theme:
+      type: ReadOnlyStream
+      prefixes:
+        '': ['user://themes/gwergilius-multilang', 'user://themes/quark']
+twig:
+  namespaces:
+    quark: 'user://themes/quark/templates'

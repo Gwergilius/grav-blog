@@ -14,4 +14,18 @@ COMMENTS:
   EMAIL: E-mail
   MESSAGE: Üzenet
   SUBMIT: Küldés
-  
+PLUGIN_LANGSWITCHER:
+  BUILTIN_CSS: 'Használd a beépített CSS-t'
+  BUILTIN_CSS_HELP: 'Töltsd be a CSS fájlt, amit a LangSwitcher plugin tartalmaz.'
+  UNTRANSLATED_PAGES_BEHAVIOR: 'Le nem fordított oldalak viselkedése'
+  UNTRANSLATED_PAGES_BEHAVIOR_HELP: "Meghatározza, hogy mit tegyen egy nyelvi hivatkozással, ha az aktuális oldal nem létezik az adott nyelven, vagy létezik, de nincs közzétéve."
+  UNTRANSLATED_PAGES_BEHAVIOR_OPTION_NONE: 'Nyelv megjelenítése (alapértelmezett)'
+  UNTRANSLATED_PAGES_BEHAVIOR_OPTION_REDIRECT: 'Nyelv megjelenítése, link a főoldalhoz'
+  UNTRANSLATED_PAGES_BEHAVIOR_OPTION_HIDE: 'Nyelv elrejtése'
+  LANGUAGE_DISPLAY: 'Nyelv Megjelenítése'
+  LANGUAGE_DISPLAY_HELP: 'A nyelv megjelenítési formátuma, amely lehet „hosszú” (pl. angol) vagy „rövid” (pl. angol)'
+  LANGUAGE_DISPLAY_LONG: 'Hosszú'
+  LANGUAGE_DISPLAY_SHORT: 'Rövid'
+  TRANSLATED_URLS: 'Lefordított URL-ek'
+  TRANSLATED_URLS_HELP: 'Használja a tényleges lefordított oldal URL-címét a nyers útvonal helyett.'
+  SWITCH_LANGUAGE: -- Válasszon nyelvet --
