@@ -1,4 +1,4 @@
-# user/config/groups.yaml
+# user/config/groups.yaml - Frissített 5 szintű rendszer
 
 visitors:
   groupname: visitors
@@ -9,25 +9,50 @@ visitors:
       login: true
     comments:
       create: true
-      
+
+moderators:
+  groupname: moderators
+  description: "Közösségi moderátorok, kommenteket és felhasználókat kezelhetnek"
+  readableName: "Moderátorok"
+  access:
+    site:
+      login: true
+    comments:
+      create: true
+      moderate: true        # Kommentek moderálása
+      delete: true          # Kommentek törlése
+      approve: true         # Kommentek jóváhagyása
+    users:
+      moderate: true        # Felhasználók moderálása (figyelmeztetés, ideiglenes tiltás)
+    reports:
+      view: true            # Jelentések megtekintése
+      handle: true          # Jelentések kezelése
+
 editors:
   groupname: editors
-  description: "Szerkesztők, saját cikkeket kezelhetnek"
+  description: "Tartalom szerkesztők, cikkeket és oldalakat kezelhetnek"
   readableName: "Szerkesztők"
   access:
     site:
       login: true
     admin:
-      login: true
-      pages: true
+      login: true           # Admin panel hozzáférés
+      pages: true           # Oldalak kezelése
     pages:
-      create: true
-      read: true
-      update: true
-      delete: true
+      create: true          # Új cikkek/oldalak létrehozása
+      read: true            # Oldalak olvasása
+      update: true          # Saját és mások cikkeinek szerkesztése
+      delete: true          # Cikkek törlése
+      publish: true         # Cikkek publikálása
+    media:
+      create: true          # Képek/fájlok feltöltése
+      delete: true          # Média fájlok törlése
     comments:
-      create: true
-      moderate: true
+      create: true          # Kommentálás
+    categories:
+      manage: true          # Kategóriák kezelése
+    tags:
+      manage: true          # Címkék kezelése
 
 administrators:
   groupname: administrators
@@ -35,6 +60,6 @@ administrators:
   readableName: "Adminisztrátorok"
   access:
     admin:
-      super: true
+      super: true           # Minden admin jogosultság
     site:
       login: true

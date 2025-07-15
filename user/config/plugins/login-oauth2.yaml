@@ -9,13 +9,14 @@ store_provider_data: false
 # Alapértelmezett csoport a külső bejelentkezésekhez
 default_groups:
   - visitors
+
 # Alapértelmezett jogosultságok (ezt felülírják a csoportok)
 default_access_levels:
   access:
     site:
       login: true
     comments:
-      create: false
+      create: true
 
 providers:
   github:
