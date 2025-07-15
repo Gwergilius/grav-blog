@@ -60,6 +60,7 @@ administrators:
   readableName: "Adminisztrátorok"
   access:
     admin:
+      login: true
       super: true           # Minden admin jogosultság
     site:
       login: true
